@@ -1,0 +1,6 @@
+FROM nixos/nix
+
+# Copy over the Nix derivation
+COPY .default.nix default.nix
+# Run nix-shell
+CMD nix-shell --pure
